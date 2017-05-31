@@ -1,0 +1,12 @@
+<html>
+<body>
+
+{% for log in logs %}
+    <div>
+        <p>published: {{ log.pub_date }}</p>
+        <p><pre>{{ log.json_data }}</pre></p>
+    </div>
+{% endfor %}
+
+</body>
+</html>
