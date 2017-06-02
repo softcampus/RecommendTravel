@@ -24,4 +24,8 @@ urlpatterns = [
     url(r'^test/test/$', views.test2, name='analysis'),
     url(r'^webhook/$', views.webhook, name='webhook'),
     url(r'^log/$', views.log, name='log'),
+    url(r'^select$', views.select, name='select'),
+    url(r'^insert$', views.insert, name='insert'),
+    url(r'^delete$', views.delete, name='delete'),
+    url(r'^drop$', views.drop, name='drop'),
 ]
