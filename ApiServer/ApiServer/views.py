@@ -6,6 +6,7 @@ from django.views.decorators.http import require_POST
 from django.shortcuts import render
 from urllib import parse
 from pymongo import MongoClient
+import json
 
 import pymongo
 
@@ -29,7 +30,13 @@ def webhook(request):
     received_json_data = parse.unquote(received_json_data)
     log = Log(json_data = received_json_data)
     log.save()
-    return HttpResponse(received_json_data)
+    answer = {
+        "speech": 'hi, I am fine. Thank you. and you? ',
+        "displayText": 'hi, I am fine. Thank you. and you?',
+        "source": "apiai-weather-webhook-sample"
+    }
+    ans_str = json.dumps(answer)
+    return HttpResponse(ans_str)
 
 
 def log(request):

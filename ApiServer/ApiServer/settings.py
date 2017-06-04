@@ -25,7 +25,8 @@ SECRET_KEY = 'pa1tx(d*&(3z3sye!43jy#1(#ix#bfl&kezi537jy6s3tow-bu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['52.79.162.48']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
